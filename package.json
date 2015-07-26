@@ -10,6 +10,7 @@
   "dependencies":{
   "koa":"*"	  ,
   "koa-router":"*",
+  "koa-static":"*",
   "koa-swig":"*" ,
   "node-inspector":"*" ,
   "ron":"*"

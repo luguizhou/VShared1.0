@@ -1,5 +1,5 @@
 ﻿var db = require('../redis-db/db');
-var doctors = require('../modals/User');
+var doctors = require('../models/User');
 
 exports.index = function (req, res, next) {
     res.render('doctors', { title: '医生注册' });
