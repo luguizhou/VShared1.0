@@ -12,6 +12,7 @@ app.context.render = render({
     ext: 'html',
     //locals: locals,
    // filters: filters
+
 });
 routes(router);
 app.use(router.routes());
