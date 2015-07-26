@@ -1,0 +1,356 @@
+﻿{% extends 'layout.html' %}
+
+{% block title %}My Page{% endblock %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="custom.css">
+{% endblock %}
+
+{% block content %}
+
+<input id="nav_hidden" type="hidden" value="首页" />
+<div ng-app="homeApp" ng-controller="homeCtrl">
+    <!--@*滑动图片区域*@-->
+    <div class="slide_pic">
+        <div class="sp_left">
+            <div class="sp_top_shadow"></div>
+            <div style="height: 245px; margin: 10px; border: 1px solid #fff;">
+                <carousel interval="myInterval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4 ng-bind="Slide+$index"></h4>
+                            <p ng-bind="slide.text"></p>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+            <div class="sp_bottom_shadow"></div>
+        </div>
+        <div class="sp_right">
+            <div class="spr_cont">
+                <div class="sprc02">
+                    <div class="sprc01_left"><span class="glyphicon glyphicon-star"></span></div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                </div>
+                <div class="sprc01">
+                    <div class="sprc01_left"><span class="glyphicon glyphicon-star"></span></div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                </div>
+                <div class="sprc02">
+                    <div class="sprc01_left"><span class="glyphicon glyphicon-star"></span></div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                </div>
+                <div class="sprc01">
+                    <div class="sprc01_left"><span class="glyphicon glyphicon-star"></span></div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="sprc01_right">
+                        <span>JS/CSS</span>
+                        <span>JQuery</span>
+                        <span>HTML</span>
+                        <span>SQL</span>
+                        <span>PHP</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--@*技术晨读*@-->
+    <div class="tech_reading">
+        <div class="tr_title" id="a">技术晨读</div>
+        <div class="tr_cont">
+            <img src="../../Content/images/temp_pic01.png" width="100" height="75" />
+            <div class="trc_tit">时尚最强大脑</div>
+            </br>
+            <div class="trc_cont">
+                政治家最关心的不是什么是正确的什么是正确的，所以即便有带
+                所以即便所以即便 <span>[详情]</span>
+            </div>
+            <ul class="trc_ul">
+                <li><a href="">人民币：滋生细菌危害健康</a><span class="tuijian"></span></li>
+                <li><a href="">雷阵雨侵袭华北，今日津津 暴雨</a></li>
+                <li><a href="">未来一周湖南高温持续，局地可达14C</a></li>
+                <li><a href="">明日起东北华北将迎强降雨</a><span class="jing"></span></li>
+                <li><a href="">人民币：滋生细菌危害健康</a></li>
+                <li><a href="">高温天气持续，明日起暴雨袭来</a></li>
+            </ul>
+        </div>
+
+        <div class="tr_cont">
+            <img src="../../Content/images/temp_pic02.png" width="100" height="75" />
+            <div class="trc_tit">时尚最强大脑</div>
+            </br>
+            <div class="trc_cont">
+                政治家最关心的不是什么是正确的什么是正确的，所以即便有带
+                所以即便所以即便 <span>[详情]</span>
+            </div>
+            <ul class="trc_ul">
+                <li><a href="">人民币：滋生细菌危害健康</a><span class="tuijian"></span></li>
+                <li><a href="">雷阵雨侵袭华北，今日津津 暴雨</a></li>
+                <li><a href="">未来一周湖南高温持续，局地可达14C</a></li>
+                <li><a href="">明日起东北华北将迎强降雨</a><span class="jing"></span></li>
+                <li><a href="">人民币：滋生细菌危害健康</a></li>
+                <li><a href="">高温天气持续，明日起暴雨袭来</a></li>
+            </ul>
+        </div>
+
+        <div class="tr_cont01">
+            <img src="../../Content/images/temp_pic03.png" width="100" height="75" />
+            <div class="trc_tit">时尚最强大脑</div>
+            </br>
+            <div class="trc_cont">
+                政治家最关心的不是什么是正确的什么是正确的，所以即便有带
+                所以即便所以即便 <span>[详情]</span>
+            </div>
+            <ul class="trc_ul">
+                <li><a href="">人民币：滋生细菌危害健康</a><span class="tuijian"></span></li>
+                <li><a href="">雷阵雨侵袭华北，今日津津 暴雨</a></li>
+                <li><a href="">未来一周湖南高温持续，局地可达14C</a></li>
+                <li><a href="">明日起东北华北将迎强降雨</a><span class="jing"></span></li>
+                <li><a href="">人民币：滋生细菌危害健康</a></li>
+                <li><a href="">高温天气持续，明日起暴雨袭来</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--@*读书笔记*@-->
+    <div class="tech_reading">
+        <div class="tr_title" id="b">读书笔记</div>
+        <div class="reading_note">
+            <div class="ih-item square effect4">
+                <a href="/ReadingNote/NoteDetail">
+                    <div class="img">
+                        <img alt="img" width="284" height="184" src="~/Content/images/test001.png">
+                    </div>
+                    <div class="mask1"></div>
+                    <div class="mask2"></div>
+                    <div class="info">
+                        <h3>Angularjs开发实战</h3>
+                        <p>查看详情</p>
+                    </div>
+                </a>
+            </div>
+            <div class="rn_title"><span class="rnt_count">笔记数：25</span>评分：☆ ☆ ☆ ☆ ☆</div>
+            <div class="rn_title">标签：Angularjs、css、js、html</div>
+        </div>
+        <div class="reading_note">
+            <div class="ih-item square effect4">
+                <a href="/ReadingNote/NoteDetail">
+                    <div class="img">
+                        <img alt="img" width="284" height="184" src="~/Content/images/test002.png">
+                    </div>
+                    <div class="mask1"></div>
+                    <div class="mask2"></div>
+                    <div class="info">
+                        <h3>Angularjs开发实战</h3>
+                        <p>查看详情</p>
+                    </div>
+                </a>
+            </div>
+            <div class="rn_title"><span class="rnt_count">笔记数：25</span>评分：☆ ☆ ☆ ☆ ☆</div>
+            <div class="rn_title">标签：Angularjs、css、js、html</div>
+        </div>
+        <div class="reading_note">
+            <div class="ih-item square effect4">
+                <a href="/ReadingNote/NoteDetail">
+                    <div class="img">
+                        <img alt="img" width="284" height="184" src="~/Content/images/test003.png">
+                    </div>
+                    <div class="mask1"></div>
+                    <div class="mask2"></div>
+                    <div class="info">
+                        <h3>Angularjs开发实战</h3>
+                        <p>查看详情</p>
+                    </div>
+                </a>
+            </div>
+            <div class="rn_title"><span class="rnt_count">笔记数：25</span>评分：☆ ☆ ☆ ☆ ☆</div>
+            <div class="rn_title">标签：Angularjs、css、js、html</div>
+        </div>
+        <div class="reading_note">
+            <div class="ih-item square effect4">
+                <a href="/ReadingNote/NoteDetail">
+                    <div class="img">
+                        <img alt="img" width="284" height="184" src="~/Content/images/test004.png">
+                    </div>
+                    <div class="mask1"></div>
+                    <div class="mask2"></div>
+                    <div class="info">
+                        <h3>Angularjs开发实战</h3>
+                        <p>查看详情</p>
+                    </div>
+                </a>
+            </div>
+            <div class="rn_title"><span class="rnt_count">笔记数：25</span>评分：☆ ☆ ☆ ☆ ☆</div>
+            <div class="rn_title">标签：Angularjs、css、js、html</div>
+        </div>
+        <div class="reading_note">
+            <div class="ih-item square effect4">
+                <a href="/ReadingNote/NoteDetail">
+                    <div class="img">
+                        <img alt="img" width="284" height="184" src="~/Content/images/test005.png">
+                    </div>
+                    <div class="mask1"></div>
+                    <div class="mask2"></div>
+                    <div class="info">
+                        <h3>Angularjs开发实战</h3>
+                        <p>查看详情</p>
+                    </div>
+                </a>
+            </div>
+            <div class="rn_title"><span class="rnt_count">笔记数：25</span>评分：☆ ☆ ☆ ☆ ☆</div>
+            <div class="rn_title">标签：Angularjs、css、js、html</div>
+        </div>
+        <div class="reading_note">
+            <div class="ih-item square effect4">
+                <a href="/ReadingNote/NoteDetail">
+                    <div class="img">
+                        <img alt="img" width="284" height="184" src="~/Content/images/test007.png">
+                    </div>
+                    <div class="mask1"></div>
+                    <div class="mask2"></div>
+                    <div class="info">
+                        <h3>Angularjs开发实战</h3>
+                        <p>查看详情</p>
+                    </div>
+                </a>
+            </div>
+            <div class="rn_title"><span class="rnt_count">笔记数：25</span>评分：☆ ☆ ☆ ☆ ☆</div>
+            <div class="rn_title">标签：Angularjs、css、js、html</div>
+        </div>
+
+
+    </div>
+    <!--@*开发总结*@-->
+    <div class="tech_reading">
+        <div class="tr_title" id="c">开发总结</div>
+        <div class="devl_submit">
+            <div class="ds_left">
+                <ul class="dsl_list">
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/images/devl001.png" width="140" height="95" />
+                            <div class="dsl_cont">
+                                <div class="dslc_tit">《侠客世界》手游创业记</div>
+                                <div class="dslc_auth">尘封烟雨<span>2014-04-21 12:22</span></div>
+                                <div class="dslc_cont">
+                                    <p>
+                                        金融圈子的朋友们对易欢欢极为熟悉。作为中国国内极负盛名的科技分析师，
+                                        宏源证券研究所副所长，战略新兴产业首席分析师，
+                                        同时也是互联网金融千人会秘书长、国际金融论坛互联网金融研究中心执行主任、
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/images/devl002.png" width="140" height="95" />
+                            <div class="dsl_cont">
+                                <div class="dslc_tit">如何玩转虚拟现实</div>
+                                <div class="dslc_auth">尘封烟雨<span>2014-04-21 12:22</span></div>
+                                <div class="dslc_cont">
+                                    <p>
+                                        金融圈子的朋友们对易欢欢极为熟悉。作为中国国内极负盛名的科技分析师，
+                                        宏源证券研究所副所长，战略新兴产业首席分析师，
+                                        同时也是互联网金融千人会秘书长、国际金融论坛互联网金融研究中心执行主任、
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li style="border-bottom: none;">
+                        <a href="#">
+                            <img src="~/Content/images/devl003.png" width="140" height="95" />
+                            <div class="dsl_cont">
+                                <div class="dslc_tit">不是所有的管理都会成功</div>
+                                <div class="dslc_auth">尘封烟雨<span>2014-04-21 12:22</span></div>
+                                <div class="dslc_cont">
+                                    <p>
+                                        金融圈子的朋友们对易欢欢极为熟悉。作为中国国内极负盛名的科技分析师，
+                                        宏源证券研究所副所长，战略新兴产业首席分析师，
+                                        同时也是互联网金融千人会秘书长、国际金融论坛互联网金融研究中心执行主任、
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ds_right">
+                <div class="no_right" style="border: none;">
+                    <div class="nor_title" style="font-size: 16px;">相关推荐</div>
+                    <ul class="nor_list">
+                        <li><a href="#">IT界需求最旺的16项发大水技能</a></li>
+                        <li><a href="#">发的符合规划和规划16项技能</a></li>
+                        <li><a href="#">求最旺的16项技能</a></li>
+                        <li><a href="#">I阿打发第三方对方最旺的16项技能</a></li>
+                        <li><a href="#">求最旺的16项技能</a></li>
+                        <li><a href="#">IT界需求最旺的16项发大水技能</a></li>
+                        <li><a href="#">发的符合规划和规划16项技能</a></li>
+                        <li><a href="#">求最旺的16项技能</a></li>
+                        <li><a href="#">I阿打发第三方对方最旺的16项技能</a></li>
+                        <li><a href="#">I阿打发第三方对方最旺的16项技能</a></li>
+                        <li><a href="#">求最旺的16项技能</a></li>
+                        <li><a href="#">IT界需求最旺的16项发大水技能</a></li>
+                        <li><a href="#">发的符合规划和规划16项技能</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--@*清浮动*@-->
+    <div class="clearfix"></div>
+    <div style="height: 18px;"></div>
+</div>
+
+
+
+{% endblock %}

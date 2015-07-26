@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+
+    {% block head %}
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+   
+    {% endblock %}
+</head>
+<body id="top" data-spy="scroll" data-target="#navbarExample" data-offset="0">
+
+    <div class="main_container">
+        <div class="mc_logo">
+            <div class="mcl_img"></div>
+            <div class="mcl_login">
+                <section id="login">
+                    <!--登录信息框，勿删-->
+                    {% include "login.html"%}
+                </section>
+            </div>
+            <div class="mcl_search">
+                <input type="text" placeholder="请输入搜索内容" />
+                <span></span>
+            </div>
+        </div>
+        <!--菜单  勿删-->
+        {% include "navBar.html" %}
+        <div class="mc_content">
+            <div class="mc_top_shadow"></div>
+            <div class="mc_bottom_shadow"></div>
+            <div style="height: 2px;"></div>
+
+            <!--右浮动工具条  勿删-->
+            {% include "floatBar.html" %}
+
+            <!--中间内容区  勿删-->
+            {% block content %}{% endblock %}
+
+            <div style="height: 2px;"></div>
+            <!--撑容器，勿删-->
+        </div>
+    </div>
+
+    <!--页面footer，勿删-->
+    {% include "footer.html" %}
+
+    {% block scripts %}
+    <script type="text/javascript" src="/scripts/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="/scripts/angular.js"></script>
+    <script type="text/javascript" src="/scripts/bootstrap-scrollspy.js"></script>
+   
+    <script type="text/javascript" src="/scripts/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    {% endblock %}
+</body>
+</html>
