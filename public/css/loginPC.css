@@ -1,0 +1,351 @@
+﻿  body {
+        margin: 0;
+        padding: 0;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+   
+       
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        color: #333333;
+        text-align: left;
+        line-height: normal;
+    }
+    ul, li, div {
+    box-sizing:border-box;
+    }
+    a {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        color: #333333;
+        text-align: left;
+        line-height: normal;
+        text-decoration:none;
+    }
+    input {
+        border: 0px solid #ffffff;
+        font-size: 16px;
+    }
+        input:focus, input:active, input:hover {
+            border: none;
+            outline: none;
+        }
+    select:focus, select:active, select:hover {
+        border: none;
+        outline: none;
+    }
+        select {
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        color: #333333;
+        text-align: left;
+        line-height: normal;
+        width: 88px;
+    }
+    .head {
+        width:100%;
+        height:10%;
+        min-height:100px;
+    }
+    
+    .head-content {
+        width: 69%;
+        margin: 0 auto;
+        height:90px;
+        position:relative;
+    }
+    .head .head-content .left {
+        vertical-align: middle;
+        position:absolute;
+        left: 0;
+        bottom: 0;
+    }
+        .head .head-content .left > img {
+            display:inline-block;
+            float:left;
+        }
+        .head .head-content .left > span {
+            display: inline-block;
+            border-left: 1px solid #CCCCCC;
+            color:#666666 ;
+            font-size: 16px;
+            padding: 4px 11px;
+            margin: 6px 0 0 5px;
+        }
+    .head .head-content .right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0 20px 6px 0;
+    }
+    .head .head-content .right>select {
+        border:none;
+    }
+            .head .head-content .right > span {
+                border-left:1px solid #CCCCCC;
+                padding:0 0 0 10px;
+            } 
+    .content {
+            background: none;
+            width: 100%;
+            height: 86%;
+            min-height: 600px;
+            min-width: 360px;
+            transition: background 2s;
+            -moz-transition: background 2s;	/* Firefox 4 */
+            -webkit-transition: background 2s;	/* Safari 和 Chrome */
+            -o-transition: background 2s;	/* Opera */
+        }
+        .content > div {
+            width: 70%;
+            margin: 0 auto;
+            min-height:470px;
+        }
+            .content > div > div {
+                width: 340px;
+                float: right;
+                border: 1px solid #E4E4E4;
+                /*min-height: 470px;*/
+                box-shadow: 6px 6px 10px 0px #999999;
+                background-color: #ffffff;
+                margin: 70px 28px 0 0;
+                  padding: 0 0 36px 0;
+            }
+                .content > div > div > ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 30px 0 50px 0;
+                }
+                    .content > div > div > ul.hasloaded {
+                        list-style: none;
+                        padding: 0;
+                        margin: 18px 0 20px 0;
+                    }
+                        .content > div > div > ul.hasloaded > li.username {                     
+                            height: 140px;
+                            background: none;
+                            border: none;
+                            padding: 0;
+                            margin: 0 auto -10px;
+                        }
+                            .content > div > div > ul > li.username > div {
+                                display: none;
+                            }
+                        .content > div > div > ul.hasloaded > li.username > div {
+                            display: block;
+                        }
+                        .content > div > div > ul.hasloaded > li.username > input {
+                            display:none;
+                        }
+
+                        .content > div > div > ul.hasloaded > li.username > div > div {
+                            height: 106px;
+                            width: 106px;
+                            border-radius: 50px;
+                            margin: 0 auto;
+                            border: 1px solid #D1D1D1;
+                        }
+                        .content > div > div > ul.hasloaded > li.username > div > span {
+                            margin: 4px auto;
+                            font-size: 20px;
+                            text-align: center;
+                            display:block;
+                        }
+
+                    .content > div > div > ul > li {
+                        display: block;
+                        height: 50px;
+                        border-bottom: 1px solid #BBCBDF;
+                        width: 78%;
+                        margin: 0 auto;
+                        padding: 22px 0 0 36px;
+                    }
+                        .content > div > div > ul > li.username {
+                            background: url("../images/username.png") no-repeat 0 23px transparent;
+                        }
+                        .content > div > div > ul > li.pwd {
+                            background: url("../images/pwd.png") no-repeat 0 23px transparent;
+                        }
+                        .content > div > div > ul > li.account-name {
+                            background: url("../images/account.png") no-repeat 0 23px transparent;
+                            padding: 10px 0 0 36px;
+                        }
+                            .content > div > div > ul > li.account-name > select {
+                                width: 100%;
+                                height: 39px;
+                                border: none;
+                                background-color: #ffffff;
+                            }
+                            .content > div > div > ul > li.account-name > select:focus {
+                                width: 100%;
+                                height: 39px;
+                                border: none;
+                                background-color: #FFFFFF;
+                            } 
+                            .content > div > div > ul > li.corporation-name {
+                                background: url("../images/login/corporation.png") no-repeat 0 23px transparent;
+                            }
+                        .content > div > div > ul > li.login-time {
+                            background: url("../images/login/logintime.png") no-repeat 0 23px transparent;
+                        }
+                .content > div > div > div {
+                    width: 78%;
+                    margin: 0 auto;
+                } 
+                .content > div > div > div > a {
+                    display: block;
+                    height: 30px;
+                    background: #157EFB;
+                    text-align: center;
+                    padding: 10px 0 0 0;
+                    color: #ffffff;
+                }
+                .content > div > div > div > a:hover {
+                    background: #2162B2;
+                }
+                    .content > div > div > div > div {
+                        margin:7px 0 0 0;
+                    }
+
+                    .content > div > div > div > div > div.remenber-name {
+                        width: 50%;
+                        float: left;
+                        color: #999999;
+                        cursor: pointer;
+                    }
+                .content > div > div > ul.hasloaded + div > div > div.remenber-name {
+                    display: none;
+                }
+                    .content > div > div > div > div>div.forget-pwd {
+                        width: 50%;
+                        float: left;
+                        text-align: right;
+                        color: #999999;
+                        cursor: pointer;
+                    }
+                    .content > div > div > div > div>div.switch-account {
+                        width: 50%;
+                        float: left;
+                        color: #157DFB;
+                        display: none;
+                        cursor: pointer;
+                    }
+                .content > div > div > ul.hasloaded + div > div > div.switch-account {
+                    display: block;
+                }
+
+                 .footer {
+                        background: #ffffff;
+                        width: 100%;
+                        height: 4%;
+                        min-height: 40px;
+                    }
+    .footer >div{
+        background: #ffffff;
+        width: 69%;
+        height: 4%;
+        margin:0 auto;
+        min-height: 40px;
+    }
+        .footer > div > div {
+            background: #ffffff;
+            height: 4%;
+            margin: 0 auto;
+            color:#999999;
+            text-align:center;
+        }
+@media screen and (max-width:768px) {
+    .head-content {
+        height:74px;
+        width: 100%;
+    }
+    .head .head-content .left {
+        position:static;
+    }
+    .content > div > div {
+    float:none;
+    margin:10px auto;
+    }
+
+}
+@media screen and (max-width:992px) {
+
+
+}
+@media screen and (max-width:1200px) {
+
+
+}
+
+#modifyPasswordDialog > div {
+    margin:auto;
+    margin-top:15%;
+    border-radius:10px;
+    width:500px;
+    height:300px;
+    border:1px solid gray;
+    background-color:#fff;
+    font-size:21px;
+}
+
+#modifyPasswordDialog > div > div {
+    margin:10% 0 0 10%;
+}
+
+#modifyPasswordDialog > div .input > div {
+    width: 100%;
+    float:left;
+    position:relative;
+}
+
+#modifyPasswordDialog > div .input > div > label {
+    width: 40%;
+    float:left;
+    position:relative;
+    color: #666666;
+    text-align: left;
+    min-width:90px;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+#modifyPasswordDialog > div .input > div > input {
+    width: 50%;
+    float:left;
+    position:relative;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    text-align: left;
+    color: #000000;
+    display: inline-block;
+    background-color: #FFFFFF;
+    background-image: none;
+    border:1px solid #66AFE9;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;  
+    padding: 6px 4px 6px 8px;
+    margin: 4px 4px 4px 0px;
+}
+
+#modifyPasswordDialog > div .button > button {
+    width:45%;
+    padding:5px;
+    cursor:pointer;
+    border:0px solid white;
+    background-color:white;
+    border-radius:5px;
+    font-size:21px;
+}
+
+#modifyPasswordDialog > div .button > button:hover {
+    color:white;
+    background-color:#ff6100;
+}

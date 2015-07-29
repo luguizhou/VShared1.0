@@ -1,0 +1,44 @@
+.navbar-top{
+  border-bottom: 2px solid #6f5499;
+  background-image: url('textures/highlight.png');
+  background-image: none,-webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,.0) 100%);
+  background-image: none,-moz-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,.0) 100%);
+  background-image: none,-o-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,.0) 100%);
+  background-image: none,linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,.0) 100%);
+  background-position: 50% 50%;
+  background-color: #e3e3e3;
+}
+.navbar-top .userBlock{
+	padding: 14px;
+}
+.navbar-top .userToolbar>.k-button{
+  padding: 12px;
+  border: none;
+}
+.navbar-top *[kendo-menu]{
+  border: none;	
+}
+
+.navbar-top *[kendo-menu]>li{
+	border: none;
+}
+.navbar-top .k-menu .k-item, .k-widget.k-menu-horizontal>.k-item{
+	border-right-width: 0;
+}
+.navbar-top .k-menu .k-item>.k-link{
+	padding: 15px 1.1em;
+}
+.k-menu .k-state-hover>.k-state-active {
+	background-color: transparent;
+	background-color: transparent;
+}
+.k-menu .k-item > .k-state-border-right,
+.k-menu .k-item > .k-state-border-left {
+  background-color: #cdcdcd;
+  color: #000000;
+}
+.treeViewConttainer{
+	min-height: 700px;
+	padding: 10px 0 0 0;
+    border-right: 1px solid #cdcdcd;
+}
