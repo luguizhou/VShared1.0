@@ -1,11 +1,14 @@
-/**
- * Created with JetBrains WebStorm.
- * User: guola
- * Date: 12-9-27
- * Time: 下午12:10
- * To change this template use File | Settings | File Templates.
- */
-
+var redis = require("redis");
+var coRedis = require("co-redis");
+var db  = redis.createClient({
+    port: 6379,
+    host: '127.0.0.1',
+    name: 'users',
+    password:123456
+});
+var dbCo = coRedis(db);
+module.exports = dbCo;
+/*
 var ron = require('ron');
 // Client connection
 var client = ron({
@@ -16,13 +19,14 @@ var client = ron({
 // Schema definition
 
 // Schema definition
-var doctors = client.get('doctors');
+var doctors = client.get('users');
 doctors.property('id', {identifier: true});
 doctors.property('username', {unique: true});
 doctors.property('email', {index: true, email: true});
 doctors.property('name', {});
 
 module.exports = client;
+*/
 
 //data remove
 /*
@@ -42,7 +46,7 @@ doctors.remove(
 // data update
 /*
 doctors.update({
-id:5,  
+id:5,
 username: null,
 
 }, function(err, user) {
