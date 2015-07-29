@@ -1,9 +1,68 @@
-﻿<ul style="width: 115px; margin-right: 0;">
-    <li>
-        <a id="registerLink" href="/Account/Register">注 册</a>
-    </li>
-    |
-    <li>
-        <a id="loginLink" href="/Account/Login">登 陆</a>
-    </li>
-</ul>
+﻿<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" data-tag="b1anw" content="width=device-width, initial-scale=1.0, user-scalable=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" data-tag="b1anw" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="css/loginPC.css" />
+<title>UPMall</title>
+</head>
+<body>
+    <div id ="loginPage">
+        <div class="head">
+            <div class="head-content">
+                <div class="left">
+                   <!-- <img src="images/login/uplogo.png" />-->
+                    <span id="complaySay">全球第一中型企业应用平台</span>
+                </div>
+                <div class="right">
+                    <select id="language" name="language">
+                    </select>
+                    <span><a href="../updoc/web/index.htm" id="help">帮助</a></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content" id="content">
+            <div>
+                <div>
+                    <ul id="loginBox">
+                    <!--	<ul id="loginBox" class="hasloaded">-->
+                        <li class="username">
+                            <div style="display: none ;">
+                                <div style="background: url('images/login/u32.png') no-repeat 0 0; ">
+
+                                </div>
+                                <span>sa1</span>
+                            </div>
+
+                            <input type="text" id="userName" placeholder="用户名" />
+                        </li>
+                        <li class="pwd"><input id="password" type="password" placeholder="密码" /></li>
+                       
+                        <!--<li class="corporation-name"><input placeholder="公司名称" /></li>-->
+
+                    </ul>
+                    <div id="handleBar">
+                        <a href="javascript:void(0)" id="login" onclick="loginButton()">登录</a>
+                        <div>
+                            <div class="remenber-name"><input type="checkbox" /><label id="remenberUserName">记住用户名</label></div>
+                            <div class="switch-account" onclick="initLoadedState()" id="changeAccount">切换账号</div>
+                            <div class="forget-pwd" onclick="forgetPwd()" id="forgetPassword">忘记密码？</div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <div>用友优普信息技术有限公司 版权所有©1997-2014</div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/loginPC.js"></script>
+
+</body></html>

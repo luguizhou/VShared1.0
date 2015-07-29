@@ -13,7 +13,9 @@
   "koa-static":"*",
   "koa-swig":"*" ,
   "node-inspector":"*" ,
-  "ron":"*"
+  "ron":"*",
+  "koa-send":"*",
+  "art-template":"*"
   }	
 
 }

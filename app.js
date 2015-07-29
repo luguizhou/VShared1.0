@@ -1,17 +1,15 @@
-﻿var koa = require('koa')
+﻿var koa = require('koa'),
+path = require('path'),
+router = require('koa-router')(),
+routes = require('./routes/routes.js'),
+staticServer  = require('koa-static'),
+render = require('koa-swig');
 var app = koa();
-var path = require('path');
-var router = require('koa-router')();
-var routes = require('./routes/routes.js');
-var staticServer  = require('koa-static');
-var render = require('koa-swig');
-app.use(staticServer(__dirname + '/Content'));
+console.log(__dirname);
+app.use(staticServer(__dirname + '/public'));
 app.context.render = render({
     root: path.join(__dirname, 'views'),
     ext: 'html',
-    //locals: locals,
-    // filters: filters
-
 });
 routes(router);
 app.use(router.routes());
