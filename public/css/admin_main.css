@@ -1,0 +1,272 @@
+body{
+	background: url("../images/tiny_grid.png") repeat scroll 0 0 transparent;
+	margin:0 auto;
+	padding:0;
+	font-size:12px;
+}
+a{
+	
+	color:rgb(132, 132, 132);
+}
+/*header*/
+.header{
+	width:100%;
+	height:67px;
+	position:relative;
+	border-bottom:1px solid #000;
+	background:url("../images/header_bg.png") repeat-x scroll 0 0 transparent;
+}
+.clear{
+	clear:both;
+}
+.h_div{
+    height: 66px;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -33px;
+    position: absolute;
+    top: 50%;
+    width: 1200px;
+}
+.h_logo{
+	background: url("../images/h_logo.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 62px;
+    width: 188px;
+}
+.h_info{
+    color: rgb(132, 132, 132);
+    float: right;
+    margin: 30px 5px 0 0;
+}
+.h_info a{
+	color: rgb(132, 132, 132);
+    margin: 0 10px;
+}
+.h_info a:hover{
+	color:#fff;
+	text-decoration:none;
+}
+/*container-left*/
+
+.container{
+	width:1200px;
+	min-height:800px;
+}
+.left_menu{
+    border-top: medium none;
+    float: left;
+    min-height: 690px;
+    width: 210px;
+}
+.active a{
+	color: #fca70d;
+}
+.lm_info{
+	background:#292929;
+	height:125px;
+	width:208px;
+	border-top:1px solid #555555;
+}
+.lm_info img{
+	float:left;
+	margin:20px 0 0 10px;
+}
+.lmi_cont{
+    color: rgb(132, 132, 132);
+    float: left;
+    height: 105px;
+    line-height: 24px;
+    margin: 10px 0 0 5px;
+    overflow: hidden;
+    padding: 5px;
+    width: 100px;
+	*width:88px;
+}
+.lmi_cont span{
+	float:left;
+}
+.lmi_cont p{
+	word-wrap: break-word;
+}
+.lm_menu{
+	width: 202px;
+	font-size:12px;
+}
+h2.acc_trigger {
+	background: url("../images/menu_bg01.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    font-size: 18px;
+    font-weight: normal;
+    height: 53px;
+    line-height: 53px;
+    margin: 0;
+    padding: 0;
+    width: 208px;
+}
+h2.acc_trigger a {
+	text-decoration: none;
+	display: block;
+	padding: 0 0 0 45px;
+}
+h2.acc_trigger a:hover {
+	color: #fca70d;
+}
+
+.acc_container {
+	background: none repeat scroll 0 0 rgb(230, 230, 230);
+    clear: both;
+    overflow: hidden;
+    padding: 0;
+    width: 208px;
+	border-bottom: 1px solid rgb(204, 204, 204);
+}
+.myList{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+.myList li{
+    font-size: 16px;
+    height: 37px;
+    line-height: 37px;
+    width: 209px;
+	color:#000;
+}
+.default{
+	background: url("../images/menu_bg03.png") no-repeat scroll 0 0 transparent;
+}
+.myList li a{
+    display: block;
+    padding: 0 0 0 70px;
+    width: 208px;
+}
+.myList li a:hover{
+	background: url("../images/menu_bg02.png") no-repeat scroll 0 0 transparent;
+	text-decoration:none;
+	color:#fff;
+}
+.myList li a:focus{
+	 outline:none;
+}
+.choose{
+	background: url("../images/menu_bg02.png") no-repeat scroll 0 0 transparent;
+}
+.choose a{
+	text-decoration:none;
+	color:#fff;
+}
+/*container-right*/
+.right_content{
+    float: right;
+    min-height: 620px;
+    width: 910px;
+}
+.rc_bread{
+	background: url("../images/bread_bg.png") repeat-x scroll 0 0 transparent;
+    height: 31px;
+    margin-left: -22px;
+	*margin-left:-52px;
+    margin-top: -1px;
+    width: 960px;
+	*width:982px;
+}
+.rc_bread span{
+	color: rgb(163, 163, 163);
+    float: left;
+    margin: 5px 0 0 25px;
+	*margin: 5px 0 0 55px;
+}
+.rc_bread a{
+	color: rgb(123, 123, 123);
+    margin: 10px;
+}
+.rc_bread a:hover{
+	color:#000;
+}
+.rcc_common{
+    width: 935px;
+}
+.rcc_common h2{
+	color:#404040;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size:24px;
+	margin: 35px 0 25px;
+}
+.rcc_img{
+	background: url("../images/common_01.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 81px;
+    margin: 0 15px 0 0;
+    width: 98px;
+	text-align:center;
+	cursor:pointer;
+	float:left;
+}
+.rcc_img span{
+	font-size: 28px;
+    margin: 20px 0 10px;
+}
+.rcc_img b{
+	font-weight:normal;
+}
+.rcc_faq{
+    margin-top: 35px;
+    min-height: 200px;
+    width: 915px;
+}
+.rccf_title span{
+	background: url("../images/faq_num.png") no-repeat scroll 0 0 transparent;
+    color: rgb(255, 255, 255);
+    float: left;
+    height: 30px;
+    padding: 7px 0 0 11px;
+    width: 30px;
+}
+.rccf_title b{
+	float: left;
+    font-size: 14px;
+    margin: 5px 0 0 12px;
+}
+.panel-body p{
+	color: rgb(136, 136, 136);
+    float: left;
+	*float:none;
+    font-size: 13px;
+    margin: 10px 0 10px 40px;
+	*margin: 35px 0 0 50px;
+	line-height: 25px;
+	
+}
+.rccf_copyright{
+	float: right;
+    font-size: 20px;
+    margin-right: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
