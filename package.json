@@ -13,11 +13,11 @@
   "koa-static":"*",
   "koa-swig":"*" ,
   "node-inspector":"*" ,
-  "ron":"*",
+  "koa-send":"*",
   "redis":"*",
   "koa-redis":"*",
-    "co-body":"*",
-   "koa-bodyparser":"*"
+  "co-body":"*",
+  "co-redis":"*",
+  "koa-bodyparser":"*"
   }
-
 }
