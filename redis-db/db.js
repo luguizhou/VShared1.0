@@ -1,10 +1,3 @@
-/**
- * Created with JetBrains WebStorm.
- * User: guola
- * Date: 12-9-27
- * Time: 下午12:10
- * To change this template use File | Settings | File Templates.
- */
 
 var ron = require('ron');
 // Client connection
@@ -16,11 +9,11 @@ var client = ron({
 // Schema definition
 
 // Schema definition
-var doctors = client.get('doctors');
-doctors.property('id', {identifier: true});
-doctors.property('username', {unique: true});
-doctors.property('email', {index: true, email: true});
-doctors.property('name', {});
+var users = client.get('users');
+users.property('id', {identifier: true});
+users.property('username', {unique: true});
+users.property('email', {index: true, email: true});
+users.property('name', {});
 
 module.exports = client;
 

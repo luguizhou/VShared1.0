@@ -4,9 +4,12 @@ router = require('koa-router')(),
 routes = require('./routes/routes.js'),
 staticServer  = require('koa-static'),
 render = require('koa-swig');
+var bodyParser = require('koa-bodyparser');
 var app = koa();
 console.log(__dirname);
+app.use(bodyParser());
 app.use(staticServer(__dirname + '/public'));
+app.use(require('koa-redisy'));
 app.context.render = render({
     root: path.join(__dirname, 'views'),
     ext: 'html',

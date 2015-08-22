@@ -1,8 +1,5 @@
-﻿var db = require('../redis-db/db');
-var users = require('../models/User');
-
-
-exports.list = function (req, res, next) {
+﻿var users = require('../models/User.js');
+exports.list = function (next) {
     doctors.list({
         direction: 'desc'
     }, function (err, users) {
@@ -16,37 +13,12 @@ exports.list = function (req, res, next) {
 
 };
 
-exports.add = function (req, res, next) {
-    console.log("POST: ");
-    console.log(req.body);
-    doctors.create(
-        { username: this.params.username, email: this.params.email, password: this.params.password },
-        function (err, user) {
-            if (user) {
-                console.log({ ret: true, msg: '恭喜您成功注册', data: user });
-                return { ret: true, msg: '恭喜您成功注册', data: user };
-            }
-            else {
-                console.log({ ret: false, msg: '请修改医生昵称', data: err });
-                return { ret: false, msg: '请修改医生昵称', data: err };
-            }
-        });
+exports.add = function *(params) {
+    return yield users.create(params);
 };
 
-exports.doctor = function (req, res, next) {
-    doctors.get({ id: this.params.id }
-    , function (err, user) {
-        if (!err) {
-            console.log(user);
-            return user;
-        }
-        else {
-            return console.log(err);
-        }
-
-    });
-    
-    return;
+exports.get = function *(params) {
+    return yield users.get({ id: params.id });;
 };
 
 exports.update = function (req, res, next) {
