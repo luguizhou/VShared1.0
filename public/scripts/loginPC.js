@@ -14,21 +14,27 @@ function keyEnter() {
 
 var baseUrl = location.protocol + "//" + location.host;
 var proxyConfig = {
-    "login": { url: baseUrl + "/userdelete", method: "POST" },
+    "login": { url: baseUrl + "/create", method: "POST" },
     "logout": { url: baseUrl + "/upservices/com.yonyou.u8.framework.server.core.U8UAPServiceFacade/UAP/logout", method: "GET" },
     "serverPubKey": { url: baseUrl + "/upservices/com.yonyou.u8.framework.server.core.U8UAPServiceFacade/UAP/getRsaPublicKey", method: "GET" }
 };
 var cb= {};
 function loginButton(){
-    var params = {id:1,username:document.getElementById('userName').value,password:document.getElementById('password').value};
+    var params = {username:document.getElementById('userName').value,password:document.getElementById('password').value};
     if(document.getElementById('email')){
         params.email=document.getElementById('email').value;
     }
 	cb.loadXMLDoc(proxyConfig.login.url, proxyConfig.login.method, { data: params,callback: callback });
 	function callback (data){
         debugger;
-        location.href=baseUrl+"/admin/index";
 
+        if(!data.err){
+            var userData = data.data;
+            window.localStorage.setItem("userData",JSON.stringify(userData));
+            location.href=baseUrl+"/admin/index.html";
+        }else{
+            alert(data.err);
+        }
 		/*if(data.code == "200"){
 			var userData = data.data.userdata;
 			userData.token = data.data.usertoken;

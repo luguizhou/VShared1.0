@@ -66,14 +66,18 @@
             display:inline-block;
             float:left;
         }
-        .head .head-content .left > span {
-            display: inline-block;
-            border-left: 1px solid #CCCCCC;
-            color:#666666 ;
-            font-size: 16px;
-            padding: 4px 11px;
-            margin: 6px 0 0 5px;
+  .head .head-content .left > span {
+      display: inline-block;
+      border-left: 1px solid #CCCCCC;
+      color:#666666 ;
+      font-size: 16px;
+      padding: 4px 11px;
+      margin: 6px 0 0 5px;
+  }
+        .head .head-content .left > span:first-child {
+            border:none;
         }
+
     .head .head-content .right {
         position: absolute;
         right: 0;
