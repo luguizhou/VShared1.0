@@ -28,7 +28,7 @@ function routes(router) {
         }
         console.log(this.body);
     });
-    router.all('/getuser/:id', function*(next) {
+    router.get('/getuser', function*(next) {
         this.body = yield users.get(this.params);
         console.log(this.body);
     });
