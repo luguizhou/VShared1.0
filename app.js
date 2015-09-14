@@ -6,7 +6,6 @@ staticServer  = require('koa-static'),
 render = require('koa-swig');
 var bodyParser = require('koa-bodyparser');
 var app = koa();
-console.log(__dirname);
 app.use(bodyParser());
 app.use(staticServer(__dirname + '/public'));
 app.use(require('koa-redisy'));

@@ -7,15 +7,19 @@
     "name": "guizhou",
     "email": ""
   },
-  "dependencies":{
-  "koa":"*"	  ,
-  "koa-router":"*",
-  "koa-static":"*",
-  "koa-swig":"*" ,
-  "node-inspector":"*" ,
-  "ron":"*",
-  "koa-send":"*",
-  "art-template":"*"
-  }	
-
+  "dependencies": {
+    "art-template": "*",
+    "body-parser": "^1.13.3",
+    "koa": "*",
+    "koa-bodyparser": "^2.0.1",
+    "koa-redisy": "0.0.7",
+    "koa-router": "*",
+    "koa-send": "*",
+    "koa-static": "*",
+    "koa-swig": "*",
+    "node-inspector": "*",
+    "qrcode-npm": "*",
+    "ron": "*",
+    "ueditor": "^1.1.1"
+  }
 }

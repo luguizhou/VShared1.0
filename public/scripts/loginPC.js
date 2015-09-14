@@ -14,7 +14,7 @@ function keyEnter() {
 
 var baseUrl = location.protocol + "//" + location.host;
 var proxyConfig = {
-    "login": { url: baseUrl + "/create", method: "POST" },
+    "login": { url: baseUrl + "/login", method: "POST" },
     "logout": { url: baseUrl + "/upservices/com.yonyou.u8.framework.server.core.U8UAPServiceFacade/UAP/logout", method: "GET" },
     "serverPubKey": { url: baseUrl + "/upservices/com.yonyou.u8.framework.server.core.U8UAPServiceFacade/UAP/getRsaPublicKey", method: "GET" }
 };

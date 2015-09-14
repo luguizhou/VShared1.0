@@ -37,6 +37,9 @@
   background-color: #cdcdcd;
   color: #000000;
 }
+.k-widget.k-treeview .k-state-selected a{
+  color:#fff;
+}
 .treeViewConttainer{
 	min-height: 700px;
 	padding: 10px 0 0 0;

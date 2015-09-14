@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" data-tag="b1anw" content="width=device-width, initial-scale=1.0, user-scalable=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" data-tag="b1anw" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>微晒网</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div id ="mainPage">
+
+    </div>
+<script>
+    var baseUrl = location.protocol + "//" + location.host;
+    var id = window.location.pathname.split("\/").length>1?window.location.pathname.split("\/")[window.location.pathname.split("\/").length-1]:window.location.pathname.split("\\")[window.location.pathname.split("\\").length-1];
+    window.location.pathname.split("\/")
+    var proxyConfig = {
+        "pageusertemplet": { url: baseUrl + "/qrcode/users/templet/"+id, method: "GET" },
+    };
+
+    var cb={};
+    cb.loadXMLDoc = function (url, type, params) {
+        var myUrl = url ? url : "";
+        var myType = type ? type : "GET";
+        var myParams = params.data ? params.data : "";
+        var myData = '';
+        if (myType == "GET") {
+            myData = '?';
+            for (var item in myParams) {
+                if (myData.length > 1) {
+                    myData += "&"
+                }
+                myData += item + "=" + myParams[item];
+            }
+            //myParams = myParams
+            myUrl += myData;
+        } else {
+            if (typeof myParams == "object" && window.JSON && window.JSON.stringify)
+                myData = window.JSON.stringify(myParams);
+            else
+                myData = myParams;
+        }
+        var xmlhttp;
+        if (window.XMLHttpRequest) {        // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        }
+        else {// code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                //alert(xmlhttp.responseText);
+                var result = xmlhttp.responseText;
+
+                if (params && params.callback) {
+                    if(result){
+                        var data = JSON.parse(result);
+                    }else{
+                        var data =result;
+                    }
+                    params.callback.call(this, data);
+                }
+            }
+        }
+        xmlhttp.open(myType, myUrl, true);
+        xmlhttp.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
+        xmlhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
+        xmlhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        //xmlhttp.setRequestHeader("dataType", "json");
+        //xmlhttp.setRequestHeader("data", myParams);
+        //xmlhttp.send(myData);
+        xmlhttp.send(myData);
+    };
+    cb.loadXMLDoc(proxyConfig.pageusertemplet.url, proxyConfig.pageusertemplet.method, { data: {id:id},callback: callback });
+    function callback(data){
+        document.getElementById("mainPage").innerHTML(data);
+    };
+
+</script>
+</body>
+</html>
